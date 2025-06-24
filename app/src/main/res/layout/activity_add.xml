@@ -35,10 +35,18 @@
         android:inputType="number"
         android:hint="输入成绩"/>
     <Button
-        android:id="@+id/btn_login"
+        android:id="@+id/btn_add_score"
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:text="添加"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:layout_marginTop="15dp"/>
+    <Button
+        android:id="@+id/btn_back"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="返回"
         android:textColor="@color/white"
         android:textSize="18sp"
         android:layout_marginTop="15dp"/>

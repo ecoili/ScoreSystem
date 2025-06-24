@@ -7,9 +7,11 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -24,6 +26,7 @@ public class TchActivity extends AppCompatActivity {
     private RecyclerView rvScores;
     private EditText etSearch;
     private Spinner spCourseFilter;
+    private ImageView ivSearch;
     private Button btnAddScore;
     private MyDataBase dbHelper;
     private ScoreAdapter scoreAdapter;
@@ -40,6 +43,7 @@ public class TchActivity extends AppCompatActivity {
         // 初始化视图
         rvScores = findViewById(R.id.rv_scores);
         etSearch = findViewById(R.id.et_search);
+        ivSearch = findViewById(R.id.iv_search);
         spCourseFilter = findViewById(R.id.sp_course_filter);
         btnAddScore = findViewById(R.id.btn_add_score);
 
@@ -54,7 +58,7 @@ public class TchActivity extends AppCompatActivity {
         // 加载所有成绩数据
         loadAllScores();
 
-        // 设置搜索监听
+        // 设置搜索监听--空格
         etSearch.setOnEditorActionListener((v, actionId, event) -> {
             String keyword = etSearch.getText().toString().trim();
             if (!keyword.isEmpty()) {
@@ -63,6 +67,15 @@ public class TchActivity extends AppCompatActivity {
                 loadAllScores();
             }
             return true;
+        });
+        // 设置搜索图标点击事件
+        ivSearch.setOnClickListener(v -> {
+            String keyword = etSearch.getText().toString().trim();
+            if (!keyword.isEmpty()) {
+                searchScoresByName(keyword);
+            } else {
+                loadAllScores();
+            }
         });
 
         // 设置课程筛选监听
@@ -303,7 +316,7 @@ public class TchActivity extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == 1 && resultCode == RESULT_OK) {
-            loadAllScores(); // 添加成绩后刷新列表
+            loadAllScores(); // 添加成绩、点击返回后刷新列表
         }
     }
 }

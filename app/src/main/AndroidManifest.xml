@@ -28,6 +28,9 @@
         <activity android:name=".TchActivity"
             >
         </activity>
+        <activity android:name=".AddScoreActivity"
+            >
+        </activity>
     </application>
 
 </manifest>
