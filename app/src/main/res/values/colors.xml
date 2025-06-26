@@ -9,4 +9,15 @@
     <color name="floralwhite">#FFFAF0</color> <!--花白色 -->
     <color name="lemonchiffon">#FFFACD</color> <!--柠檬绸色 -->
     <color name="cornsilk">#FFF8DC</color> <!--米绸色 -->
+    <color name="alizarin">#E74C3C</color>
+    <color name="orange">#FA6800</color>
+    <color name="amber">#F0A30A</color>
+    <color name="lime">#A4C400</color>
+    <color name="green">#60A917</color>
+    <color name="emerald">#008A00</color>
+    <color name="teal">#00ABA9</color>
+    <color name="cyan">#1BA1E2</color>
+    <color name="violet">#AA00FF</color>
+    <color name="magenta">#D80073</color>
+    <color name="crimson">#D80073</color>
 </resources>

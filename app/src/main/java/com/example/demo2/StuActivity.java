@@ -35,7 +35,7 @@ public class StuActivity extends AppCompatActivity {
 
         tvSum = findViewById(R.id.tv_sum);
 
-        btnLogout = findViewById(R.id.btn_login); // 注意：这里使用了布局中的退出登录按钮
+        btnLogout = findViewById(R.id.btn_logout);
 
         // 获取传递过来的学生信息
         int id = getIntent().getIntExtra("id", 0);

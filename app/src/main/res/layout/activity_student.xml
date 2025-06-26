@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/stars"
     android:orientation="vertical">
     <TextView
         android:id="@+id/tv_id"
@@ -10,6 +11,7 @@
         android:layout_height="wrap_content"
         android:text="25001"
         android:textSize="40sp"
+        android:textColor="@color/alizarin"
         android:gravity="center">
     </TextView>
     <LinearLayout
@@ -23,6 +25,7 @@
             android:layout_height="wrap_content"
             android:text="姓名"
             android:textSize="40sp"
+            android:textColor="@color/orange"
             android:layout_marginLeft="110dp"/>
         <TextView
             android:id="@+id/tv_class"
@@ -30,6 +33,7 @@
             android:layout_height="wrap_content"
             android:text="班级"
             android:textSize="40sp"
+            android:textColor="@color/amber"
             android:layout_marginLeft="50dp"/>
     </LinearLayout>
     <LinearLayout
@@ -43,6 +47,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="语文："
+            android:textColor="@color/crimson"
             android:textSize="35sp"
             />
         <TextView
@@ -50,6 +55,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="120"
+            android:textColor="@color/ivory"
             android:textSize="35sp"
             />
     </LinearLayout>
@@ -63,12 +69,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="数学："
+            android:textColor="@color/crimson"
             android:textSize="35sp" />
         <TextView
             android:id="@+id/tv_math"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="120"
+            android:textColor="@color/ivory"
             android:textSize="35sp"
             />
     </LinearLayout>
@@ -82,12 +90,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="英语："
+            android:textColor="@color/crimson"
             android:textSize="35sp" />
         <TextView
             android:id="@+id/tv_english"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="120"
+            android:textColor="@color/ivory"
             android:textSize="35sp"
             />
     </LinearLayout>
@@ -101,12 +111,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="物理："
+            android:textColor="@color/lime"
             android:textSize="35sp" />
         <TextView
             android:id="@+id/tv_physics"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="120"
+            android:text="80"
+            android:textColor="@color/ivory"
             android:textSize="35sp"
             />
     </LinearLayout>
@@ -120,12 +132,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="化学："
+            android:textColor="@color/lime"
             android:textSize="35sp" />
         <TextView
             android:id="@+id/tv_chemistry"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="120"
+            android:text="80"
+            android:textColor="@color/ivory"
             android:textSize="35sp"
             />
     </LinearLayout>
@@ -139,12 +153,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="生物："
+            android:textColor="@color/lime"
             android:textSize="35sp" />
         <TextView
             android:id="@+id/tv_biology"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="120"
+            android:text="80"
+            android:textColor="@color/ivory"
             android:textSize="35sp"
             />
     </LinearLayout>
@@ -158,17 +174,19 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="总分："
+            android:textColor="@color/yellow"
             android:textSize="35sp" />
         <TextView
             android:id="@+id/tv_sum"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="120"
+            android:text="600"
+            android:textColor="@color/ivory"
             android:textSize="35sp"
             />
     </LinearLayout>
     <Button
-        android:id="@+id/btn_login"
+        android:id="@+id/btn_logout"
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:text="退出登录"

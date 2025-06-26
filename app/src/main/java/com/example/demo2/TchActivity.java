@@ -28,6 +28,7 @@ public class TchActivity extends AppCompatActivity {
     private Spinner spCourseFilter;
     private ImageView ivSearch;
     private Button btnAddScore;
+    private Button btnLogout;
     private MyDataBase dbHelper;
     private ScoreAdapter scoreAdapter;
     private List<ScoreItem> scoreList = new ArrayList<>();
@@ -46,6 +47,7 @@ public class TchActivity extends AppCompatActivity {
         ivSearch = findViewById(R.id.iv_search);
         spCourseFilter = findViewById(R.id.sp_course_filter);
         btnAddScore = findViewById(R.id.btn_add_score);
+        btnLogout = findViewById(R.id.btn_logout);
 
         // 设置RecyclerView
         rvScores.setLayoutManager(new LinearLayoutManager(this));
@@ -105,6 +107,10 @@ public class TchActivity extends AppCompatActivity {
         scoreAdapter.setOnItemClickListener(position -> {
             ScoreItem item = scoreList.get(position);
             showEditDeleteDialog(item);
+        });
+        // 退出登录按钮点击事件
+        btnLogout.setOnClickListener(v -> {
+            finish(); // 关闭当前Activity，返回登录界面
         });
     }
 
@@ -176,8 +182,9 @@ public class TchActivity extends AppCompatActivity {
                 "ORDER BY s.course_id";
 
         Cursor cursor = db.rawQuery(query, new String[]{"%" + name + "%"});
-
+        boolean hasResults = false;
         while (cursor.moveToNext()) {
+            hasResults = true;
             ScoreItem item = new ScoreItem();
             item.setStuId(cursor.getInt(0));
             item.setStuName(cursor.getString(1));
@@ -191,6 +198,9 @@ public class TchActivity extends AppCompatActivity {
 
         cursor.close();
         db.close();
+        if (!hasResults) {
+            Toast.makeText(this, "该学生不存在", Toast.LENGTH_SHORT).show();
+        }
         scoreAdapter.notifyDataSetChanged();
     }
 
